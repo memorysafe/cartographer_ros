@@ -317,4 +317,7 @@ SensorBridge* MapBuilderBridge::sensor_bridge(const int trajectory_id) {
   return sensor_bridges_.at(trajectory_id).get();
 }
 
+void MapBuilderBridge::ConvertSubmapsToPGM(const std::string& dir_path) {
+    map_builder_.ConvertSubmapsToPGM(dir_path);
+}
 }  // namespace cartographer_ros

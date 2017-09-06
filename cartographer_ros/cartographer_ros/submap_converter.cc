@@ -24,13 +24,12 @@ SubmapConverter::~SubmapConverter() {
     delete submap_;
 }
 
-void SubmapConverter::toPGM(string file_name) {
+void SubmapConverter::ToPGM(string file_name) {
     ofstream file_out(file_name);
     if (file_out == NULL){
         cerr << "[WARNING] Failed to print out PGM. file_name: " << file_name << endl;
         throw 6;
     }
 
-    submap_->probability_grid().toPGM(file_out);
-
+    submap_->probability_grid().ToPGM(file_out);
 }

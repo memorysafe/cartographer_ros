@@ -23,7 +23,7 @@ public:
     ~SubmapConverter();
 
     // print it out as PGM
-    void toPGM(string file_name);
+    void ToPGM(string file_name);
 private:
 
     ifstream * in_;

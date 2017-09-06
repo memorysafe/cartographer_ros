@@ -514,4 +514,7 @@ void Node::LoadMap(const std::string& map_filename) {
   map_builder_bridge_.LoadMap(map_filename);
 }
 
+void Node::ConvertSubmapsToPGM(const std::string& dir_path){
+    map_builder_bridge_.ConvertSubmapsToPGM(dir_path);
+}
 }  // namespace cartographer_ros
