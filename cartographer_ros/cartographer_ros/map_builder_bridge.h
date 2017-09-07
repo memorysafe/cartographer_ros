@@ -21,6 +21,7 @@
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
+#include <string>
 
 #include "cartographer/mapping/map_builder.h"
 #include "cartographer/mapping/proto/trajectory_builder_options.pb.h"
@@ -67,6 +68,8 @@ class MapBuilderBridge {
   visualization_msgs::MarkerArray GetConstraintList();
 
   SensorBridge* sensor_bridge(int trajectory_id);
+
+  void ConvertSubmapsToPGM(const std::string& dir_path);
 
  private:
   const NodeOptions node_options_;

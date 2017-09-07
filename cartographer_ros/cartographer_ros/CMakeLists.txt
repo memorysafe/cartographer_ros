@@ -66,3 +66,14 @@ install(TARGETS cartographer_occupancy_grid_node
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+google_binary(cartographer_submap_converter
+        SRCS
+        submap_converter_main.cc
+        )
+
+install(TARGETS cartographer_submap_converter
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        )
