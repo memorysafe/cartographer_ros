@@ -20,8 +20,6 @@
 #include "gflags/gflags.h"
 #include "tf2_ros/transform_listener.h"
 
-#include "submap_converter.h"
-
 DEFINE_string(configuration_directory, "",
               "First directory in which configuration files are searched, "
                       "second is always the Cartographer installation to allow "
