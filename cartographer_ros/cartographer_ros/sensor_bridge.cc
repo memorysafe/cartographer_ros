@@ -166,6 +166,7 @@ void SensorBridge::HandleRangefinder(const string& sensor_id,
   const auto sensor_to_tracking =
       tf_bridge_.LookupToTracking(time, CheckNoLeadingSlash(frame_id));
   if (sensor_to_tracking != nullptr) {
+    // (Ernest) for 2D mapping, trajectory_builder is under mapping_2d/global_trajectory_builder
     trajectory_builder_->AddRangefinderData(
         sensor_id, time, sensor_to_tracking->translation().cast<float>(),
         carto::sensor::TransformPointCloud(ranges,
