@@ -21,6 +21,7 @@
 #include "tf2_ros/transform_listener.h"
 
 #include "submap_converter.h"
+#include "node_options.h"
 
 DEFINE_string(configuration_directory, "",
               "First directory in which configuration files are searched, "
